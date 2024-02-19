@@ -8,7 +8,7 @@ def load_json(filename):
         return json.load(file)
 
 
-def create_Cat(load_list):
+def create_cat(load_list):
     '''создает экземляры клаcreate_Catсса Category из загруженного файла json и выводит их свойства на печать'''
     category = []
     for i in load_list:
@@ -20,8 +20,8 @@ def create_Cat(load_list):
         print('\n')
     return category
 
-create_Cat(load_json('operations_test.json'))
-def create_Prod(load_list):
+create_cat(load_json('operations_test.json'))
+def create_prod(load_list):
     '''создает экземляры класса Product из загруженного файла json и выводит их свойства на печать'''
     products = []
     for category in load_list:
@@ -35,7 +35,7 @@ def create_Prod(load_list):
             print('\n')
         return products.append(Prod)
 
-def count_Cat(load_list):
+def count_cat(load_list):
     '''вычисляет количество категорий в экземлпряах клаcса Category'''
     category = []
     for i in load_list:
@@ -44,7 +44,7 @@ def count_Cat(load_list):
     return len(category)
 
 
-def count_Prod(load_list):
+def count_prod(load_list):
     '''вычисляет количество продуктов в экземлпряах клаcса Prod'''
     products = []
     for category in load_list:
