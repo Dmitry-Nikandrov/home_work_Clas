@@ -14,22 +14,19 @@ def test_init(product_apple):
 
 @pytest.fixture
 def category_phone():
-    return Category("Смартфоны", "Смартфоны, как средство не только коммуникации", [{
-        "name": "Samsung Galaxy C23 Ultra",
-        "description": "256GB, Серый цвет, 200MP камера",
-        "price": 180000.0,
-        "quantity": 5
-      }])
+    return Category("Смартфоны",
+    "Смартфоны, как средство не только коммуникации",
+    [
+    Product("Samsung Galaxy C23 Ultra",
+    "256GB, Серый цвет, 200MP камера",
+     180000.0,
+     5)])
+
 
 def test_cat(category_phone):
     assert category_phone.name == 'Смартфоны'
     assert category_phone.description == "Смартфоны, как средство не только коммуникации"
-    assert category_phone.product == [{
-        "name": "Samsung Galaxy C23 Ultra",
-        "description": "256GB, Серый цвет, 200MP камера",
-        "price": 180000.0,
-        "quantity": 5
-      }]
+    assert category_phone.product[0].name == "Samsung Galaxy C23 Ultra"
 
 
 def test_load_json():

@@ -20,7 +20,7 @@ def create_cat(load_list):
         print('\n')
     return category
 
-create_cat(load_json('operations_test.json'))
+
 def create_prod(load_list):
     '''создает экземляры класса Product из загруженного файла json и выводит их свойства на печать'''
     products = []
